@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+
+    <title>测试测试
+    </title>
+</head>
+
+<body>
+    这是html页面 <br />
+    <button onclick="s()">点击调用本地方法</button>
+    <button onclick="t()">测试</button>
+    <button onclick="show()">testp1</button>
+    <button onclick="test('ffffff')">testp2</button>
+
+
+    <div id="p">p</div>
+    <div id="p2">p2</div>
+    <h3>ffffffffffffffffffffff</h3>
+
+    <script type="text/javascript">
+        //有参有返回值的方法
+        function sum(a, b) {
+
+            return a + b;
+        }
+
+        //有参无返回值的方法
+        function alertMessage(message) {
+            alert(message);
+        }
+
+        //无参无返回值的方法
+        function show() {
+            //显示hello world
+            document.getElementById("p").innerHTML = "hello world";
+        }
+
+
+        function test(abc) {
+
+            document.getElementById("p2").innerHTML = abc;
+        }
+
+         function ev() {
+
+              return 123;
+        }
+
+        function s() {
+            //调用原生的方法，Android为约定的别名；back()为原生的方法
+            var result = window.Android.back();
+            //将返回结果显示在id为p的控件上
+            document.getElementById("p").innerHTML = result;
+        }
+
+        function t() {
+            alert('dddd')
+        }
+    </script>
+</body>
+
+</html>
